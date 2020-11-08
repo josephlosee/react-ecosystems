@@ -10,11 +10,11 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules)/,
         loader: 'babel-loader',
-        options: {presets: ["@babel/env"]}
+        options: {presets: ["@babel/env", "@babel/react"]}
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-laoder"]
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
