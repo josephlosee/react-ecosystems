@@ -1,8 +1,7 @@
-import { REMOVE_TODO } from "./Actions";
 import { CREATE_TODO, REMOVE_TODO } from './actions';
 // Reducers are named after the store resources they act upon - called after all state changes?
 
-export const todos = (state, action) => {
+export const todos = (state=[], action) => {
   const { type, payload } = action;
 
   switch (type) {
