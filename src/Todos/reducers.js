@@ -1,4 +1,4 @@
-import { CREATE_TODO, REMOVE_TODO, TODO_COMPLETED } from './actions';
+import { CREATE_TODO, REMOVE_TODO, MARK_TODO_AS_COMPLETED } from './actions';
 // Reducers are named after the store resources they act upon - called after all state changes?
 
 export const todos = (state=[], action) => {
@@ -17,11 +17,11 @@ export const todos = (state=[], action) => {
       const {text} = payload;
       return state.filter(todo => todo.text !== text); //Returns new array of all items that don't match the payload's text TODO: Add UUIDs and manage that way
     }
-    case TODO_COMPLETED: {
+    case MARK_TODO_AS_COMPLETED: {
       const {text} = payload;
       return state.map(todo => {
         if (todo.text === text){
-          todo.isComplete = true;
+          return {...todo, isComplete: true};
         }
         return todo;
       })

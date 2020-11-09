@@ -1,7 +1,7 @@
 import React from 'react';
 import NewTodoForm from './NewTodoForm';
 import {connect} from 'react-redux';
-import {completeTodo, removeTodo} from './actions';
+import {markTodoAsCompleted, removeTodo} from './actions';
 import TodoListItem from './TodoListItem';
 import './TodoListItem.css';
 
@@ -27,7 +27,7 @@ const mapDispatchToProps = dispatch => {
       return dispatch(removeTodo(text))
     },
     onCompletedPressed: (text) =>  {
-      return dispatch(completeTodo(text))
+      return dispatch(markTodoAsCompleted(text))
     }
   }
 };
