@@ -1,5 +1,5 @@
-import React from 'react';
 import {hot} from 'react-hot-loader';
+import React from 'react';
 import './App.css';
 import TodoList from './Todos/TodoList';
 

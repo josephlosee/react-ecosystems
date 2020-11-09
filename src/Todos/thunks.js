@@ -1,5 +1,4 @@
-import { loadTodosFailure, loadTodosSuccess } from "./actions";
-import { loadTodosInProgress, loadTodosSuccess, loadTodosFailure } from './actions';
+import { loadTodosFailure, loadTodosSuccess, loadTodosInProgress } from "./actions";
 
 /*
 
